@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="container">
       <Link to="/" className="py-24 is-block">Return to Home</Link>
-      <Hero title="About Me" pp="%PUBLIC_URL%/bk-pp.png"/>
+      <Hero title="About Me" pp="/bk-pp.png"/>
       <div className="is-flex">
         <div className="w-1/2">
           <p>
