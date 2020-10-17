@@ -4,6 +4,8 @@ import axios from 'axios';
 import _ from 'lodash';
 import Moment from 'react-moment';
 
+console.log()
+
 
 function Medium(props) {
 
@@ -13,7 +15,7 @@ function Medium(props) {
   useEffect(() => {
 
     const fetchData = async () => {
-      await axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@kantarci')
+      await axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@' + process.env.REACT_APP_MEDIUM_USERNAME)
       .then(response => {
         setPosts(response.data.items);
       })
@@ -29,7 +31,7 @@ function Medium(props) {
   return (
     <div className="mt-16">
       <h3 className="left">Featured Case Studies and Posts</h3>
-      <a className="right text-light-gray mt-16 m-btn" href="https://medium.com/@kantarci">See All on Medium »</a>
+      <a className="right text-light-gray mt-16 m-btn" href={'https://medium.com/@' + process.env.REACT_APP_MEDIUM_USERNAME}>See All on Medium »</a>
       <div className="clear"></div>
       <div className="is-flex">
         {

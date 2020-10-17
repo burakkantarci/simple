@@ -7,8 +7,8 @@ import Dribbble from '../components/Dribbble'
 const Home = () => {
   return (
     <div className="container">
-      <Hero title="Hi, I'm Burak!"
-            subtitle="I’m a maker–of–software living in Ankara with a passion for design, technology and sports. This is a wiki of my professional life."
+      <Hero title={process.env.REACT_APP_HERO_TITLE}
+            subtitle={process.env.REACT_APP_HERO_DESC}
             ctaAbout="More About Me"
             ctaLinkedIn="See my LinkedIn"    
       />

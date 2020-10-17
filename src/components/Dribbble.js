@@ -14,7 +14,7 @@ function Dribbble(props) {
 
     const fetchData = async () => {
       await axios.get(
-        'https://api.dribbble.com/v2/user/shots?access_token=f0341f09921dcbf35e3f5b50faacd3fe01c9052fb1396e6037dd49df0f0fde59',
+        'https://api.dribbble.com/v2/user/shots?access_token=' + process.env.REACT_APP_DRIBBBLE_TOKEN,
       )
       .then(response => {
         setShots(response.data);
@@ -32,7 +32,7 @@ function Dribbble(props) {
   return (
     <div className="mt-16">
       <h3 className="left">Featured Dribbble Shots</h3>
-      <a className="right text-light-gray mt-16 m-btn" href="https://dribbble.com/burak kantarci">See All on Dribbble »</a>
+      <a className="right text-light-gray mt-16 m-btn" href={'https://dribbble.com/' + process.env.REACT_APP_DRIBBBLE_USERNAME }>See All on Dribbble »</a>
       <div className="clear"></div>
       <div className="is-flex">
         {
