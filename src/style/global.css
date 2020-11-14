@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Vollkorn&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 :root {
   --simplestart-bg-color: #FFF;
   --font-serif: 'Vollkorn', serif;
   --font-sans-serif:  'Inter', sans-serif;
+  --font-mono: 'PT Mono', monospace;
 
   --red: #E53E3E;
   --blue: #4299E1;
@@ -11,8 +12,10 @@
   --mint: #9AE6B4;
   --green: #38A169;
   --purple: #9F7AEA;
+  --dark: #292f3a;
   --gray: #4a5568;
   --light-gray: #a0aec0;
+  --light-gray-2: #f3f8ff;
 
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -28,6 +31,14 @@ a{
 }
 a:visited{
   color: var(--gray);
+}
+h3 a{
+  color: var(--gray);
+  border-bottom: 3px solid var(--blue);
+}
+h3 a:hover{
+  color: var(--blue);
+  border-bottom: 3px solid var(--blue);
 }
 .container{
   width: 60%;
@@ -110,6 +121,14 @@ small {
   margin-bottom: 24px;
 }
 
+.py-4{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.px-8{
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .px-24{
   padding-left: 24px;
   padding-right: 24px;
@@ -130,11 +149,36 @@ small {
 }
 
 
+.text-left{
+  text-align: left
+}
+.text-center{
+  text-align: center
+}
+.font-semibold{
+  font-weight: 600;
+}
+.text-dark{
+  color: var(--dark)
+}
 .text-gray{
   color: var(--gray)
 }
 .text-light-gray{
   color: var(--light-gray)
+}
+.text-2xs{
+  font-size: 0.5rem;
+}
+.text-xs{
+  font-size: 0.75rem;
+}
+.text-base{
+  font-size: 1rem;
+}
+
+.font-mono{
+  font-family: var(--font-mono);
 }
 
 .border-radius-8{
@@ -146,7 +190,23 @@ small {
 .border-top-right-radius-8{
   border-top-right-radius: 8px;
 }
+.border{
+  border: 1px solid;
+}
+.border-bottom-1{
+  border-bottom: 1px solid;
+}
+.border-color{
+  border-color: var(--gray);
+}
 
+.zebra tr:nth-child(2n+1){
+  background-color:var(--light-gray-2);
+}
+.hover-blue tr:hover{
+  background-color: var(--blue);
+  color: #FFF;
+}
 
 
 .is-flex{
@@ -163,6 +223,15 @@ small {
 }
 .w-1\/2{
   width: 50%;
+}
+.w-full{
+  width: 100%;
+}
+.w-075{
+  width: 0.75rem;
+}
+.h-075{
+  height: 0.75rem;
 }
 
 .shadow-lg{
@@ -203,10 +272,18 @@ small {
   box-shadow: var(--shadow-xl) !important;
 }
 
+tr a{
+  color: var(--gray);
+}
+tr a:hover{
+  color: #FFF;
+}
+
 @media only screen and (max-width: 415px) {
   .hero-title{
     font-size: 2.5rem;
     margin-top: 32px;
+    margin-bottom: 0;
   }
   .hero-subtitle{
     max-width: 100%;

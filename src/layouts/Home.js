@@ -11,6 +11,7 @@ const Home = () => {
             subtitle={process.env.REACT_APP_HERO_DESC}
             ctaAbout="More About Me"
             ctaLinkedIn="See my LinkedIn"    
+            ctaProjects="Projects"    
       />
       <Medium></Medium>
       <Dribbble></Dribbble>
