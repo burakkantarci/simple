@@ -1,4 +1,4 @@
-SimpleStart React Portfolio Theme
+SimpleStart React Portfolio Theme v1
 
 ## Available Scripts
 
