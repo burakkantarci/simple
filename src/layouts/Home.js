@@ -23,7 +23,7 @@ const Home = () => {
       </div>
       <div className="mt-36">
         <h2>Get in Touch</h2>
-        <p>Best ways to get in touch are on Twitter at <Link to="https://twitter.com/kantarci">@Kantarci</Link> or via email at <a href="mailto:burakkantarci.08@gmail.com">burakkantarci.08@gmail.com</a>.</p>
+        <p>Best ways to get in touch are on Twitter at <a href="https://twitter.com/kantarci" target="_blank" rel="noopener noreferrer">@Kantarci</Link> or via email at <a href="mailto:burakkantarci.08@gmail.com">burakkantarci.08@gmail.com</a>.</p>
       </div>
     </div>
   )
