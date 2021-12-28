@@ -250,6 +250,7 @@ small {
 }
 .is-inline{
   display: inline-block;
+  width: 100%;
 }
 
 .w-1\/3{
